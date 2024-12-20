@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/allesonsales/article-preview-component]
-- Live Site URL: [https://github.com/allesonsales/article-preview-component]
+- Live Site URL: [https://allesonsales.github.io/article-preview-component/]
 
 ## My process
 
