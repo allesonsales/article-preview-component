@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem; 
+    background-color: var(--Light-Grayish-Blue);
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Manrope";
+    background-color: white;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    min-width: 380px;
+    
+}
+
+image {
+    width: 100%;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: contain;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.content h1 {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.content p {
+    font-size: .8rem;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--Desaturated-Dark-Blue);    
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+hr {
+    border: none;
+}
+
+.share-button {
+    margin-left: 3rem;
+}
+
+
+.social  #avatar {
+    width: 15%;
+    border-radius: 5rem;
+}
+
+.social .social-text {
+    font-size: .8rem;
+    font-weight: 700;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social .social-text p {
+    font-weight: 300;
+}
+
+.social .bi-arrow-up-right-circle-fill {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    color: var(--Very-Dark-Grayish-Blue);
+    cursor: pointer;
+}
+
+.share-box {
+    display: none;
+}
+
+.box-mobile {
+    width: 100%;
+}
+
+.share-box-mobile {
+    display: block;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 0 0 1rem 1rem;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+.share-box-mobile .share-icon {
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.share-box-mobile .share-icon p {
+    text-transform: uppercase;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    section {
+        flex-direction: row;
+        align-self: center;
+        justify-content: center;
+        min-width: 768px;
+        max-width: 850px;
+    }
+
+    .box-mobile {
+        display: none;
+    }
+
+    .content {
+        width: 90%;
+    }
+
+    .content h1 {
+        font-size: 1.3rem;
+    }
+
+    .image {
+        height: 100%;
+    }
+
+    .image img {
+        height: 100%;
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .social .social-text {
+        display: flex;
+        justify-content: center;
+    }
+    .share-box-mobile {
+        display: none;
+    }
+
+    .share-box {
+        position: relative;
+        display: block;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .share-button {
+        position: relative;
+    }
+
+    .share-button:hover {
+        transform: scale(1.1);
+    }
+
+    .triangle {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        position: absolute;
+        bottom: 2rem;
+        left: .5rem;
+        border-right: 20px solid transparent;
+        border-top: 20px solid var(--Very-Dark-Grayish-Blue)
+    }
+    
+    .share-icon {
+        display: block;
+        background-color: var(--Very-Dark-Grayish-Blue);
+        position: absolute;
+        padding: .5rem 2rem;
+        bottom: 2.5rem;
+        right: -8rem;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .share-icon p {
+        text-transform: uppercase;
+        color: white;
+    }
+    
+    .share-icon .bi {
+        font-size: 1.5rem;
+        color: white;
+        transition: ease-in-out;
+        cursor: pointer;
+    }
+
+    .share-icon .bi:hover {
+        transform: scale(1.1);
+    }
+}
+
